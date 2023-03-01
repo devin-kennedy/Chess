@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
+    <script src="/static/table.js" defer></script>
+    <script src="{{ url_for('static', filename='table.js') }}" defer></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+        integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <script src="https://cdn.tutorialjinni.com/chess.js/0.12.0/chess.js"></script>
+    <title>Chess</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Chess</h1>
+        <h2>Current Engine Level: Magnus Carlsen (as of 29 November 1990)</h2>
+
+        <div class="align">
+            <div id="myBoard"></div>
+            <h3 id="eval"></h3>
+            <div class="evalBar">
+                <div class="evalBlack" id="blackEval"></div>
+                <div class="evalWhite" id="whiteEval"></div>
+            </div>
+        </div>
+
+        <h2 id="status"></h2>
+        <p id="pgnOut"></p>
+    </div>
+    <button id="resetBoard">Reset Board</button>
+    <button id="fromPgn">Paste in moves (PGN)</button>
+    <button id="bookOpenScotch">Scotch Opening</button>
+</body>
+</html>

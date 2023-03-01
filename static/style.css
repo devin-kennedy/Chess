@@ -1,0 +1,59 @@
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+th, td {
+    border: 3px solid black;
+    height: 75px;
+    width: 75px;
+}
+
+td {
+    align-items: center;
+}
+
+button {
+    margin-top: 10px;
+}
+
+button:hover{
+    /* background-color: black!important; */
+    cursor: pointer;
+}
+
+#myBoard {
+    width: 500px;
+}
+
+.align {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+#eval {
+    margin-left: 10px;
+}
+
+.eval {
+    padding-left: 15px;
+}
+
+.evalWhite {
+    height: 250px;
+    width: 30px;
+    background-color: white;
+    border: 2px solid black;
+    margin-left: 15px;
+}
+
+.evalBlack {
+    height: 250px;
+    width: 30px;
+    background-color: black;
+    margin-left: 15px;
+    border: 2px solid black;
+}
+
