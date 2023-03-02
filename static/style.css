@@ -47,6 +47,7 @@ button:hover{
     background-color: white;
     border: 2px solid black;
     margin-left: 15px;
+    transition: height 2s;
 }
 
 .evalBlack {
@@ -55,5 +56,6 @@ button:hover{
     background-color: black;
     margin-left: 15px;
     border: 2px solid black;
+    transition: height 2s;
 }
 

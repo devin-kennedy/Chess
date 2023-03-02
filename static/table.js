@@ -177,20 +177,20 @@ function updateEval(eval) {
 
 function calculate_eval_bar_bounds(eval) {
     eval = parseFloat(eval);
-    var percentage = (((eval / 3.3) ** 2 ) / 32)+1;
-    if (percentage >= 2) {
-        percentage = 1.99;
-    } else if (percentage <= -2) {
-        percentage = -1.99;
+
+    if (eval !== 0.0) {
+        var whiteHeight = 250 + (100 * (2.4 * Math.tanh(0.05 * eval)));
+        var blackHeight = 500 - whiteHeight;
+
+        console.log("EVAL CALCULATIONS");
+        console.log(eval);
+        console.log(whiteHeight);
+        console.log(blackHeight);
+        return [whiteHeight, blackHeight];
+    } else {
+        return [250, 250];
     }
-    var whiteHeight = 250 * percentage;
-    var blackHeight = 500 - whiteHeight;
-    console.log("EVAL CALCULATIONS");
-    console.log(eval);
-    console.log(percentage);
-    console.log(whiteHeight);
-    console.log(blackHeight);
-    return [whiteHeight, blackHeight];
+
 }
 
 function set_eval_bar(bounds) {
